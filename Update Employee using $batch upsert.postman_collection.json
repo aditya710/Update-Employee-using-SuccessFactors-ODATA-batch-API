@@ -1,0 +1,219 @@
+{
+	"info": {
+		"_postman_id": "ea857137-ce21-48bc-b6d8-7a0583cbf3f1",
+		"name": "Update Employee using $batch upsert",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "$Batch 2 Users UPSERT: Same changeset",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{Password}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{Username}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Host",
+						"value": "apisalesdemo8.successfactors.com",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "multipart/mixed; boundary=batch_36522ad7-fc75-4b56-8c71-56071383e77b",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "--batch_36522ad7-fc75-4b56-8c71-56071383e77b\r\nContent-Type: multipart/mixed; boundary=changeset_77162fcd-b8da-41ac-a9f8-9357efbbd621\r\n\r\n--changeset_77162fcd-b8da-41ac-a9f8-9357efbbd621\r\nContent-Transfer-Encoding: binary\r\nContent-Type: application/http\r\n\r\nPOST upsert HTTP/1.1\r\nContent-Type: application/json;charset=utf-8\r\naccept:application/json\r\n\t\t\t\r\n\t\t\t{\r\n                \"__metadata\": {\r\n                    \"uri\": \"https://apisalesdemo4.successfactors.com:443/odata/v2/PaymentInformationDetailV3(PaymentInformationV3_effectiveStartDate=datetime'2016-12-30T00:00:00',PaymentInformationV3_worker='cgrante',externalCode=375301L)\",\r\n                    \"type\": \"SFOData.PaymentInformationDetailV3\"\r\n                },\r\n                \"accountNumber\": \"0999999999\",\r\n                \"bank\" : \"943\"\r\n            }\r\n            \r\n--changeset_77162fcd-b8da-41ac-a9f8-9357efbbd621\r\nContent-Transfer-Encoding: binary\r\nContent-Type: application/http\r\n\r\nPOST upsert HTTP/1.1\r\nContent-Type: application/json;charset=utf-8\r\naccept:application/json\r\n\t\t\t\r\n\t\t\t{\r\n\t\t\t\t\"__metadata\" : {\r\n\t\t\t\t\t\"uri\" : \"https://apisalesdemo4.successfactors.com:443/odata/v2/PerPersonal(personIdExternal='cgrante',startDate=datetime'2016-12-30T00:00:00')\", \"type\" : \"SFOData.PerPersonal\"\r\n\t\t\t\t}, \r\n\t\t\t\t\"lastName\" : \"Grante1\"\r\n\t\t\t}\r\n\r\n--changeset_77162fcd-b8da-41ac-a9f8-9357efbbd621\r\nContent-Transfer-Encoding: binary\r\nContent-Type: application/http\r\n\r\nPOST upsert HTTP/1.1\r\nContent-Type: application/json;charset=utf-8\r\naccept:application/json\r\n\r\n\t\t\t{\r\n    \t\t\t\"__metadata\": {\r\n        \t\t\t\"uri\": \"https://apisalesdemo4.successfactors.com:443/odata/v2/User('cgrante')\",\"type\": \"SFOData.User\"\r\n        \t\t},\r\n    \t\t\t\"firstName\": \"Carla1\"\r\n    \t\t}\r\n\r\n--changeset_77162fcd-b8da-41ac-a9f8-9357efbbd621\r\nContent-Transfer-Encoding: binary\r\nContent-Type: application/http\r\n\r\nPOST upsert HTTP/1.1\r\nContent-Type: application/json;charset=utf-8\r\naccept:application/json\r\n\t\t\t\r\n\t\t\t{\r\n                \"__metadata\": {\r\n            \t\"uri\": \"https://apisalesdemo4.successfactors.com:443/odata/v2/PaymentInformationDetailV3(PaymentInformationV3_effectiveStartDate=datetime'2015-01-21T00:00:00',PaymentInformationV3_worker='80300',externalCode=577L)\",\r\n            \t\"type\": \"SFOData.PaymentInformationDetailV3\"\r\n        \t\t},\r\n                \"accountNumber\": \"0999999998\",\r\n                \"bank\" : \"939\"\r\n            }\r\n            \r\n\r\n--changeset_77162fcd-b8da-41ac-a9f8-9357efbbd621\r\nContent-Transfer-Encoding: binary\r\nContent-Type: application/http\r\n\r\nPOST upsert HTTP/1.1\r\nContent-Type: application/json;charset=utf-8\r\naccept:application/json\r\n\t\t\t\r\n\t\t\t{\r\n\t\t\t\t\"__metadata\" : {\r\n\t\t\t\t\t\"uri\" : \"https://apisalesdemo4.successfactors.com:443/odata/v2/PerPersonal(personIdExternal='80300',startDate=datetime'2016-12-30T00:00:00')\", \"type\" : \"SFOData.PerPersonal\"\r\n\t\t\t\t}, \r\n\t\t\t\t\"lastName\" : \"Dixon1\"\r\n\t\t\t}\r\n\r\n--changeset_77162fcd-b8da-41ac-a9f8-9357efbbd621\r\nContent-Transfer-Encoding: binary\r\nContent-Type: application/http\r\n\r\nPOST upsert HTTP/1.1\r\nContent-Type: application/json;charset=utf-8\r\naccept:application/json\r\n\r\n\t\t\t{\r\n    \t\t\t\"__metadata\": {\r\n        \t\t\t\"uri\": \"https://apisalesdemo4.successfactors.com:443/odata/v2/User('80300')\",\"type\": \"SFOData.User\"\r\n        \t\t},\r\n    \t\t\t\"firstName\": \"Carl1\"\r\n    \t\t}\r\n\r\n--changeset_77162fcd-b8da-41ac-a9f8-9357efbbd621--\r\n\r\n--batch_36522ad7-fc75-4b56-8c71-56071383e77b--"
+				},
+				"url": {
+					"raw": "{{Host}}/$batch",
+					"host": [
+						"{{Host}}"
+					],
+					"path": [
+						"$batch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "$Batch 2 Users UPSERT: Separate changeset",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{Password}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{Username}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Host",
+						"value": "apisalesdemo8.successfactors.com",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "multipart/mixed; boundary=batch_36522ad7-fc75-4b56-8c71-56071383e77b",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "--batch_36522ad7-fc75-4b56-8c71-56071383e77b\r\nContent-Type: multipart/mixed; boundary=changeset_77162fcd-b8da-41ac-a9f8-9357efbbd621\r\n\r\n--changeset_77162fcd-b8da-41ac-a9f8-9357efbbd621\r\nContent-Transfer-Encoding: binary\r\nContent-Type: application/http\r\n\r\nPOST upsert HTTP/1.1\r\nContent-Type: application/json;charset=utf-8\r\naccept:application/json\r\n\t\t\t\r\n\t\t\t{\r\n                \"__metadata\": {\r\n                    \"uri\": \"https://apisalesdemo4.successfactors.com:443/odata/v2/PaymentInformationDetailV3(PaymentInformationV3_effectiveStartDate=datetime'2016-12-30T00:00:00',PaymentInformationV3_worker='cgrante',externalCode=375301L)\",\r\n                    \"type\": \"SFOData.PaymentInformationDetailV3\"\r\n                },\r\n                \"accountNumber\": \"0999999999\",\r\n                \"bank\" : \"123334659621645\"\r\n            }\r\n            \r\n--changeset_77162fcd-b8da-41ac-a9f8-9357efbbd621\r\nContent-Transfer-Encoding: binary\r\nContent-Type: application/http\r\n\r\nPOST upsert HTTP/1.1\r\nContent-Type: application/json;charset=utf-8\r\naccept:application/json\r\n\t\t\t\r\n\t\t\t{\r\n\t\t\t\t\"__metadata\" : {\r\n\t\t\t\t\t\"uri\" : \"https://apisalesdemo4.successfactors.com:443/odata/v2/PerPersonal(personIdExternal='cgrante',startDate=datetime'2016-12-30T00:00:00')\", \"type\" : \"SFOData.PerPersonal\"\r\n\t\t\t\t}, \r\n\t\t\t\t\"lastName\" : \"Grante1\"\r\n\t\t\t}\r\n\r\n--changeset_77162fcd-b8da-41ac-a9f8-9357efbbd621\r\nContent-Transfer-Encoding: binary\r\nContent-Type: application/http\r\n\r\nPOST upsert HTTP/1.1\r\nContent-Type: application/json;charset=utf-8\r\naccept:application/json\r\n\r\n\t\t\t{\r\n    \t\t\t\"__metadata\": {\r\n        \t\t\t\"uri\": \"https://apisalesdemo4.successfactors.com:443/odata/v2/User('cgrante')\",\"type\": \"SFOData.User\"\r\n        \t\t},\r\n    \t\t\t\"firstName\": \"Carla1\"\r\n    \t\t}\r\n    \t\t\r\n--changeset_77162fcd-b8da-41ac-a9f8-9357efbbd621--\r\n\r\n--batch_36522ad7-fc75-4b56-8c71-56071383e77b\r\nContent-Type: multipart/mixed; boundary=changeset_77162fcd-b8da-41ac-a9f8-9357efbbd622\r\n\r\n--changeset_77162fcd-b8da-41ac-a9f8-9357efbbd622\r\nContent-Transfer-Encoding: binary\r\nContent-Type: application/http\r\n\r\nPOST upsert HTTP/1.1\r\nContent-Type: application/json;charset=utf-8\r\naccept:application/json\r\n\t\t\t\r\n\t\t\t{\r\n\t\t\t\t\"__metadata\": {\r\n            \t\"uri\": \"https://apisalesdemo4.successfactors.com:443/odata/v2/PaymentInformationDetailV3(PaymentInformationV3_effectiveStartDate=datetime'2015-01-21T00:00:00',PaymentInformationV3_worker='80300',externalCode=577L)\",\r\n            \t\"type\": \"SFOData.PaymentInformationDetailV3\"\r\n        \t\t},\r\n\t\t\t\t\"accountNumber\": \"0999999998\",\r\n\t\t\t\t\"bank\" : \"939\"\r\n\t\t\t\t\r\n\t\t\t\r\n\t\t\t}\r\n            \r\n--changeset_77162fcd-b8da-41ac-a9f8-9357efbbd622\r\nContent-Transfer-Encoding: binary\r\nContent-Type: application/http\r\n\r\nPOST upsert HTTP/1.1\r\nContent-Type: application/json;charset=utf-8\r\naccept:application/json\r\n\t\t\t\r\n\t\t\t{\r\n\t\t\t\t\"__metadata\" : {\r\n\t\t\t\t\"uri\" : \"https://apisalesdemo4.successfactors.com:443/odata/v2/PerPersonal(personIdExternal='80300',startDate=datetime'2014-01-01T00:00:00')\", \"type\" : \"SFOData.PerPersonal\"\r\n\t\t\t\t}, \r\n\t\t\t\t\"lastName\" : \"Dixon1\"\r\n\t\t\t}\r\n\t\t\t\r\n--changeset_77162fcd-b8da-41ac-a9f8-9357efbbd622\r\nContent-Transfer-Encoding: binary\r\nContent-Type: application/http\r\n\r\nPOST upsert HTTP/1.1\r\nContent-Type: application/json;charset=utf-8\r\naccept:application/json\r\n\r\n\t\t\t{\r\n    \t\t\t\"__metadata\": {\r\n        \t\t\t\"uri\": \"https://apisalesdemo4.successfactors.com:443/odata/v2/User('80300')\",\"type\": \"SFOData.User\"\r\n        \t\t},\r\n    \t\t\t\"firstName\": \"Carl1\"\r\n    \t\t}\r\n\r\n--changeset_77162fcd-b8da-41ac-a9f8-9357efbbd622--\r\n\r\n--batch_36522ad7-fc75-4b56-8c71-56071383e77b--"
+				},
+				"url": {
+					"raw": "{{Host}}/$batch",
+					"host": [
+						"{{Host}}"
+					],
+					"path": [
+						"$batch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "$Batch 1 User UPSERT: Same changeset",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{Password}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{Username}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Host",
+						"type": "text",
+						"value": "apisalesdemo8.successfactors.com"
+					},
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "multipart/mixed; boundary=batch_36522ad7-fc75-4b56-8c71-56071383e77b"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "--batch_36522ad7-fc75-4b56-8c71-56071383e77b\r\nContent-Type: multipart/mixed; boundary=changeset_77162fcd-b8da-41ac-a9f8-9357efbbd621\r\n\r\n--changeset_77162fcd-b8da-41ac-a9f8-9357efbbd621\r\nContent-Transfer-Encoding: binary\r\nContent-Type: application/http\r\n\r\nPOST upsert HTTP/1.1\r\nContent-Type: application/json;charset=utf-8\r\naccept:application/json\r\n\t\t\t\r\n\t\t\t{\r\n                \"__metadata\": {\r\n                    \"uri\": \"https://apisalesdemo4.successfactors.com:443/odata/v2/PaymentInformationDetailV3(PaymentInformationV3_effectiveStartDate=datetime'2016-12-30T00:00:00',PaymentInformationV3_worker='cgrante',externalCode=375301L)\",\r\n                    \"type\": \"SFOData.PaymentInformationDetailV3\"\r\n                },\r\n                \"accountNumber\": \"0999999999\",\r\n                \"bank\" : \"943\"\r\n            }\r\n            \r\n--changeset_77162fcd-b8da-41ac-a9f8-9357efbbd621\r\nContent-Transfer-Encoding: binary\r\nContent-Type: application/http\r\n\r\nPOST upsert HTTP/1.1\r\nContent-Type: application/json;charset=utf-8\r\naccept:application/json\r\n\t\t\t\r\n\t\t\t{\r\n\t\t\t\t\"__metadata\" : {\r\n\t\t\t\t\t\"uri\" : \"https://apisalesdemo4.successfactors.com:443/odata/v2/PerPersonal(personIdExternal='cgrante',startDate=datetime'2016-12-30T00:00:00')\", \"type\" : \"SFOData.PerPersonal\"\r\n\t\t\t\t}, \r\n\t\t\t\t\"lastName\" : \"Grante1\"\r\n\t\t\t}\r\n\r\n--changeset_77162fcd-b8da-41ac-a9f8-9357efbbd621\r\nContent-Transfer-Encoding: binary\r\nContent-Type: application/http\r\n\r\nPOST upsert HTTP/1.1\r\nContent-Type: application/json;charset=utf-8\r\naccept:application/json\r\n\r\n\t\t\t{\r\n    \t\t\t\"__metadata\": {\r\n        \t\t\t\"uri\": \"https://apisalesdemo4.successfactors.com:443/odata/v2/User('cgrante')\",\"type\": \"SFOData.User\"\r\n        \t\t},\r\n    \t\t\t\"firstName\": \"Carla1\"\r\n    \t\t}\r\n\r\n--changeset_77162fcd-b8da-41ac-a9f8-9357efbbd621--\r\n\r\n--batch_36522ad7-fc75-4b56-8c71-56071383e77b--\r\n"
+				},
+				"url": {
+					"raw": "{{Host}}/$batch",
+					"host": [
+						"{{Host}}"
+					],
+					"path": [
+						"$batch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "$Batch 1 User UPSERT: Separate changeset",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{Password}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{Username}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Host",
+						"value": "apisalesdemo8.successfactors.com",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "multipart/mixed; boundary=batch_36522ad7-fc75-4b56-8c71-56071383e77b",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "--batch_36522ad7-fc75-4b56-8c71-56071383e77b\r\nContent-Type: multipart/mixed; boundary=changeset_77162fcd-b8da-41ac-a9f8-9357efbbd621\r\n\r\n--changeset_77162fcd-b8da-41ac-a9f8-9357efbbd621\r\nContent-Transfer-Encoding: binary\r\nContent-Type: application/http\r\n\r\nPOST upsert HTTP/1.1\r\nContent-Type: application/json;charset=utf-8\r\naccept:application/json\r\n\t\t\t\r\n\t\t\t{\r\n                \"__metadata\": {\r\n                    \"uri\": \"https://apisalesdemo4.successfactors.com:443/odata/v2/PaymentInformationDetailV3(PaymentInformationV3_effectiveStartDate=datetime'2016-12-30T00:00:00',PaymentInformationV3_worker='cgrante',externalCode=375301L)\",\r\n                    \"type\": \"SFOData.PaymentInformationDetailV3\"\r\n                },\r\n                \"accountNumber\": \"0999999999\",\r\n                \"bank\" : \"123\"\r\n            }\r\n--changeset_77162fcd-b8da-41ac-a9f8-9357efbbd621--\r\n\r\n--batch_36522ad7-fc75-4b56-8c71-56071383e77b\r\nContent-Type: multipart/mixed; boundary=changeset_77162fcd-b8da-41ac-a9f8-9357efbbd622\r\n\r\n--changeset_77162fcd-b8da-41ac-a9f8-9357efbbd622\r\nContent-Transfer-Encoding: binary\r\nContent-Type: application/http\r\n\r\nPOST upsert HTTP/1.1\r\nContent-Type: application/json;charset=utf-8\r\naccept:application/json\r\n\t\t\t\r\n\t\t\t{\r\n\t\t\t\t\"__metadata\" : {\r\n\t\t\t\t\t\"uri\" : \"https://apisalesdemo4.successfactors.com:443/odata/v2/PerPersonal(personIdExternal='cgrante',startDate=datetime'2016-12-30T00:00:00')\", \"type\" : \"SFOData.PerPersonal\"\r\n\t\t\t\t}, \r\n\t\t\t\t\"lastName\" : \"Grante1\"\r\n\t\t\t}\r\n\r\n--changeset_77162fcd-b8da-41ac-a9f8-9357efbbd622--\r\n\r\n--batch_36522ad7-fc75-4b56-8c71-56071383e77b\r\nContent-Type: multipart/mixed; boundary=changeset_77162fcd-b8da-41ac-a9f8-9357efbbd623\r\n\r\n--changeset_77162fcd-b8da-41ac-a9f8-9357efbbd623\r\nContent-Transfer-Encoding: binary\r\nContent-Type: application/http\r\n\r\nPOST upsert HTTP/1.1\r\nContent-Type: application/json;charset=utf-8\r\naccept:application/json\r\n\r\n\t\t\t{\r\n    \t\t\t\"__metadata\": {\r\n        \t\t\t\"uri\": \"https://apisalesdemo4.successfactors.com:443/odata/v2/User('cgrante')\",\"type\": \"SFOData.User\"\r\n        \t\t},\r\n    \t\t\t\"firstName\": \"Carla1\"\r\n    \t\t}\r\n\r\n--changeset_77162fcd-b8da-41ac-a9f8-9357efbbd623--\r\n\r\n--batch_36522ad7-fc75-4b56-8c71-56071383e77b--\r\n"
+				},
+				"url": {
+					"raw": "{{Host}}/$batch",
+					"host": [
+						"{{Host}}"
+					],
+					"path": [
+						"$batch"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "d857ba93-133a-411d-8f25-11539fb271c3",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "8a8f7f21-5736-41b0-8501-1fa9a6317129",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
